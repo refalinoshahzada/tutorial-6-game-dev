@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b4ccc7gvc14ge"]
+
+[ext_resource type="Script" uid="uid://8omyxeo1yoyf" path="res://scripts/Transition.gd" id="1_fyjtc"]
+
+[node name="Transition" type="CanvasLayer" unique_id=135339981]
+script = ExtResource("1_fyjtc")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=987035414]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

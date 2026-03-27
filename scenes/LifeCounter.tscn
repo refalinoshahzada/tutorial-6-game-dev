@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://jty4s5hfo4dq"]
+
+[ext_resource type="Script" uid="uid://wwv26ld1lchy" path="res://scripts/LifeLaberCounter.gd" id="1_wysaa"]
+
+[node name="LifeCounter" type="MarginContainer" unique_id=1480619730]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="." unique_id=188762189]
+layout_mode = 2
+script = ExtResource("1_wysaa")

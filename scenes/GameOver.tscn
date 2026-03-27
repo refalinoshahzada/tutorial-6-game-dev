@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://dpmlq1e36l11q"]
+
+[ext_resource type="FontFile" uid="uid://dty8p7m8ts7oy" path="res://assets/Fonts/MPlantin.ttf" id="1_6bcno"]
+[ext_resource type="Script" uid="uid://cb200xldi7jdo" path="res://scripts/BackToMenuButton.gd" id="2_qae0b"]
+[ext_resource type="Script" uid="uid://cxeixucgpxouh" path="res://scripts/Level1Button.gd" id="2_vuicl"]
+
+[node name="GameOver" type="ColorRect" unique_id=764523600]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="GameOverText" type="Label" parent="." unique_id=391810159]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -501.5
+offset_top = -78.5
+offset_right = 501.5
+offset_bottom = 78.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_6bcno")
+theme_override_font_sizes/font_size = 156
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Restart" type="Button" parent="." unique_id=943359065]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 110.0
+offset_bottom = 151.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_6bcno")
+theme_override_font_sizes/font_size = 32
+text = "Restart"
+script = ExtResource("2_vuicl")
+
+[node name="BackToMenuButton" type="Button" parent="." unique_id=283638151]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -103.5
+offset_top = -251.0
+offset_right = 103.5
+offset_bottom = -210.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_6bcno")
+theme_override_font_sizes/font_size = 32
+text = "Back to Menu"
+script = ExtResource("2_qae0b")
+
+[connection signal="pressed" from="Restart" to="Restart" method="_on_pressed"]
+[connection signal="pressed" from="BackToMenuButton" to="BackToMenuButton" method="_on_pressed"]

@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://b7uudcctp0vf1"]
+
+[ext_resource type="Script" uid="uid://cxeixucgpxouh" path="res://scripts/Level1Button.gd" id="1_w5612"]
+[ext_resource type="Script" uid="uid://bdbqgvvhneit3" path="res://scripts/Level2Button.gd" id="2_eeirb"]
+[ext_resource type="Script" uid="uid://cb200xldi7jdo" path="res://scripts/BackToMenuButton.gd" id="2_k456m"]
+
+[node name="StageSelect" type="MarginContainer" unique_id=178189198]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1695179490]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=448439033]
+layout_mode = 2
+text = "Select Stage"
+
+[node name="Level1Button" type="Button" parent="VBoxContainer" unique_id=1085940042]
+layout_mode = 2
+text = "Level 1"
+script = ExtResource("1_w5612")
+
+[node name="Level2Button" type="Button" parent="VBoxContainer" unique_id=892386806]
+layout_mode = 2
+text = "Level 2"
+script = ExtResource("2_eeirb")
+
+[node name="BackButton" type="Button" parent="VBoxContainer" unique_id=812327921]
+layout_mode = 2
+text = "Back"
+script = ExtResource("2_k456m")
+
+[connection signal="pressed" from="VBoxContainer/Level1Button" to="VBoxContainer/Level1Button" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Level2Button" to="VBoxContainer/Level2Button" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/BackButton" to="VBoxContainer/BackButton" method="_on_pressed"]
